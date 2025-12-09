@@ -1,0 +1,28 @@
+//
+// user.scss
+// Use this to write your custom SCSS
+//
+
+// Define your height range
+$height-range: 200px, 300px, 400px, 500px, 600px, 700px, 800px, 900px;
+
+// Loop through breakpoints and heights
+@each $breakpoint in map-keys($grid-breakpoints) {
+  // Use Bootstrap mixin for responsive breakpoints
+  @include media-breakpoint-up($breakpoint) {
+    @each $h in $height-range {
+      // Default (no breakpoint prefix)
+      @if $breakpoint == xs {
+        .h-#{$h} {
+          height: #{$h};
+        }
+      }
+      // Responsive variants (e.g., .h-sm-200, .h-lg-500)
+      @else {
+        .h-#{$breakpoint}-#{$h} {
+          height: #{$h};
+        }
+      }
+    }
+  }
+}
