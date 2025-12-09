@@ -22,3 +22,5 @@ bower_components/
 *.app
 *.exe
 *.war
+*.af
+*.af*
