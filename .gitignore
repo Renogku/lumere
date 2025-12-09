@@ -23,4 +23,12 @@ bower_components/
 *.exe
 *.war
 *.af
-*.af*
+*.af
+/build
+build/
+/components
+components/
+/docs
+docs/
+/src
+src/
